@@ -12,7 +12,7 @@ export default function Hero() {
         topColor="#5734e5"
         bottomColor="#1409aa"
         intensity={1.0}
-        rotationSpeed={1.0}
+        rotationSpeed={1.5}
         glowAmount={0.005}
         pillarWidth={2.0}
         pillarHeight={0.4}
