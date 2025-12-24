@@ -3,6 +3,7 @@ import LightPillar from "../../app/fondo/LightPillar";
 import { motion } from "framer-motion";
 // Opcional: puedes importar iconos si usas Lucide
 import { Download, Globe } from "lucide-react"; 
+import { sendGAEvent } from '@next/third-parties/google';
 
 export default function Hero() {
   return (
@@ -54,6 +55,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => sendGAEvent({ event: 'button_click', value: 'download_cv_es' })}
               href="/cv-es.pdf"
               download="CV_Santiago_Taher_ES.pdf"
               className="px-6 py-3 rounded-lg bg-black/40 backdrop-blur-md border border-white/10 flex items-center gap-2 hover:bg-black/60 transition-all"
@@ -67,6 +69,7 @@ export default function Hero() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               href="/cv-en.pdf"
+              onClick={() => sendGAEvent({ event: 'button_click', value: 'download_cv_en' })}
               download="CV_Santiago_Taher_EN.pdf"
               className="px-6 py-3 rounded-lg bg-black/40 backdrop-blur-md border border-white/10 flex items-center gap-2 hover:bg-black/60 transition-all"
             >
