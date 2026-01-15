@@ -17,16 +17,19 @@ export default function Navbar() {
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-300">
-        
-          <a href="#projects" className="hover:text-white transition">
+       
+
+          <Link href="/#projects" className="hover:text-white transition">
             Proyectos
-          </a>
-          <a href="#about" className="hover:text-white transition">
+          </Link>
+
+          <Link href="/#about" className="hover:text-white transition">
             Sobre mí
-          </a>
-          <a href="#contact" className="hover:text-white transition">
+          </Link>
+
+          <Link href="/#contact" className="hover:text-white transition">
             Contacto
-          </a>
+          </Link>
 
           {/* CTA */}
           <Link
@@ -51,16 +54,19 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden bg-black/90 border-t border-white/10">
           <div className="flex flex-col px-6 py-4 gap-4 text-sm text-gray-300">
-           
-            <a href="#projects" onClick={() => setOpen(false)}>
+      
+
+            <Link href="/#projects" onClick={() => setOpen(false)}>
               Proyectos
-            </a>
-            <a href="#about" onClick={() => setOpen(false)}>
+            </Link>
+
+            <Link href="/#about" onClick={() => setOpen(false)}>
               Sobre mí
-            </a>
-            <a href="#contact" onClick={() => setOpen(false)}>
+            </Link>
+
+            <Link href="/#contact" onClick={() => setOpen(false)}>
               Contacto
-            </a>
+            </Link>
 
             {/* CTA Mobile */}
             <Link

@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} bg-background text-foreground antialiased`}
       >
-        <Navbar />
+ 
         {children}
        
         

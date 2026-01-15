@@ -5,7 +5,7 @@ import Projects from "@/components/sections/Projects";
 import AcademicProjectsSection from "@/components/sections/AcademicsProjects";
 import Contact from "@/components/sections/Contact";
 import Formation from "@/components/sections/Formation";
-
+import Navbar from "../components/layout/NavBar";
 
 
 
@@ -13,6 +13,7 @@ export default function Home() {
   return (
     
     <main>
+      <Navbar/>
       <Hero />
       <About />
       <Skills />
