@@ -433,6 +433,111 @@ function ServicesView() {
   .maintenance-header { flex-direction: column; text-align: center; }
   .maintenance-card { padding: 30px 20px; }
 }
+  /* --- RESPONSIVE ADJUSTMENTS --- */
+
+@media (max-width: 1024px) {
+    .plans-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .services-wrapper {
+        padding: 60px 16px; /* Menos padding en móviles */
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .header h1 {
+        font-size: 2.2rem; /* Título más manejable */
+    }
+
+    /* Ajuste de Tarjetas de Planes */
+    .plans-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+        gap: 20px;
+    }
+
+    .card {
+        padding: 24px; /* Menos espacio interno */
+    }
+
+    .price-val {
+        font-size: 2rem;
+    }
+
+    /* Ajuste de Sección Mantenimiento */
+    .maintenance-card {
+        padding: 30px 20px;
+        border-radius: 24px;
+    }
+
+    .maintenance-header {
+        flex-direction: column; /* Icono arriba del texto */
+        text-align: center;
+        gap: 15px;
+    }
+
+    .maintenance-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+    }
+
+    .maintenance-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .maintenance-body {
+        grid-template-columns: 1fr; /* Stack vertical */
+        gap: 24px;
+    }
+
+    .maintenance-price-box {
+        padding: 20px;
+    }
+
+    .maintenance-price span {
+        font-size: 1.8rem;
+    }
+
+    /* Ajuste de Servicios Extras */
+    .extras-section {
+        margin-top: 60px;
+        padding: 40px 0;
+    }
+
+    .extras-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .extra-card {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card.recommended {
+        border-width: 1.5px; /* Bordes más finos para pantallas pequeñas */
+    }
+
+    /* Ajustar el Chip de "Recomendado" para que no tape el contenido */
+    .card .MuiChip-root {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 15px;
+        width: fit-content;
+    }
+}
             `}</style>
 
             <div className="container">
