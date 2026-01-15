@@ -85,29 +85,52 @@ const SERVICES_DATA = [
 ];
 
 const EXTRA_SERVICES = [
-  { 
-  title: 'Deploy & Hosting Setup',
-  price: 'Incluido / A convenir',
-  desc: 'Configuración de dominio, hosting y puesta en producción.'
+   { 
+    title: 'Soporte VIP (Frontend & Backend)',
+    price: 'Desde $40.000',
+    desc: 'Asistencia técnica prioritaria y soporte continuo.'
+  },
+  
+  {
+  title: 'Gestión de Base de Datos',
+  price: 'Desde $50.000',
+  desc: 'Mantenimiento, optimización y administración de bases de datos.'
 }
 ,
   { 
-  title: 'Integraciones & Automatizaciones',
-  price: 'Desde $20k',
-  desc: 'Conectamos tu web con pagos, CRMs y herramientas externas.'
-}
-,
-{ 
-  title: 'Optimización de Performance',
-  price: '$30k+',
-  desc: 'Mejora de velocidad, Core Web Vitals y experiencia de usuario.'
-}
-,
-  { title: 'Rediseño Web', price: '$45k+', desc: 'Modernización visual total.' },
-  { title: 'SEO Pro', price: '$35k+', desc: 'Posicionamiento en Google.' },
-  { title: 'Gestión RRSS', price: '$25k/mes', desc: 'Branding y contenido.' },
-  { title: 'Soporte VIP', price: '$12k+', desc: 'Asistencia técnica rápida.' },
+    title: 'Diseño Gráfico',
+    price: 'Desde $40.000',
+    desc: 'Mejora de la comunicación visual y branding digital.'
+  },
+  { 
+    title: 'Deploy & Hosting',
+    price: 'Incluido / A convenir',
+    desc: 'Configuración de dominio, hosting, SSL y puesta en producción.'
+  },
+  { 
+    title: 'Integraciones & Automatizaciones',
+    price: 'Desde $30.000',
+    desc: 'Integración con pagos, CRMs, APIs y herramientas externas.'
+  },
+  { 
+    title: 'Optimización de Performance',
+    price: 'Desde $30.000',
+    desc: 'Mejora de velocidad, Core Web Vitals y experiencia de usuario.'
+  },
+  { 
+    title: 'Rediseño Web',
+    price: 'Desde $45.000',
+    desc: 'Actualización visual y mejora de usabilidad.'
+  },
+  { 
+    title: 'SEO Profesional',
+    price: 'Desde $35.000',
+    desc: 'Optimización para buscadores y posicionamiento en Google.'
+  },
+
+ 
 ];
+
 
 function ServicesView() {
     const whatsappNumber = "541126042925"; 
