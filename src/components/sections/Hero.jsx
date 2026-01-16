@@ -9,19 +9,7 @@ export default function Hero() {
   return (
     <div style={{ width: '100%', height: '950px', position: 'relative', overflow: 'hidden' }}>
       
-      <LightPillar
-        topColor="#5734e5"
-        bottomColor="#1409aa"
-        intensity={1.0}
-        rotationSpeed={1.5}
-        glowAmount={0.005}
-        pillarWidth={2.0}
-        pillarHeight={0.4}
-        noiseIntensity={0.5}
-        pillarRotation={60}
-        interactive={false}
-        mixBlendMode="normal"
-      />
+
 
       <section className="relative z-10 h-full flex items-center">
         <div className="max-w-6xl mx-auto px-6">

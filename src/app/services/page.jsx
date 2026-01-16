@@ -1,12 +1,14 @@
 import Navbar from "./NavBar";
 import Services from "@/components/sections/ServicesView";
+import Contact from "@/components/sections/Contact"; 
 
 export default function Home() {
   return (
     
    <div>
       <Navbar/>
-        <Services />
+        <Services/>
+        <Contact/>
 
     </div>
     

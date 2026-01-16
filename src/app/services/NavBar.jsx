@@ -27,7 +27,7 @@ export default function Navbar() {
             Sobre mí
           </Link>
 
-          <Link href="/#contact" className="hover:text-white transition">
+          <Link href="#contact" className="hover:text-white transition">
             Contacto
           </Link>
 
@@ -39,7 +39,9 @@ export default function Navbar() {
             Ver servicios
           </Link>
         </div>
-
+           <Link href="#contact" className=" md:hidden hover:text-white transition">
+            Contacto
+          </Link>
         {/* Mobile button */}
         <button
           onClick={() => setOpen(!open)}
