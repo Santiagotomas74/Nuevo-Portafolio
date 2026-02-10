@@ -62,6 +62,9 @@ export default function ContactSection() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl">
               <ProfileCardWide
+              href="https://www.linkedin.com/in/santiago-taher-239008317"
+              image="/cap-git.png"
+           
                 username="Santiago Taher"
                 description="Conecta conmigo profesionalmente"
               />
@@ -69,6 +72,7 @@ export default function ContactSection() {
                 href="https://github.com/Santiagotomas74"
                 image="/cap-linked.png"
                 label="GitHub"
+             
                 username="Santiagotomas74"
                 description="Explora mis repositorios y código"
               />
@@ -129,7 +133,7 @@ function ContactAction({ href, onClick, icon, label, value, copyable }) {
   );
 }
 
-function ProfileCardWide({ href, image, label, username, description }) {
+function ProfileCardWide({ href, image, label, username, description, alt }) {
   return (
     <motion.a
       href={href}
