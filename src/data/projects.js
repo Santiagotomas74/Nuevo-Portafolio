@@ -1,8 +1,47 @@
 export const projects = [
+{
+  slug: "iphone-ecommerce",
+  title: "iPhones E-commerce",
+  status: "Production",
+  role: "Full Stack Developer",
+  description:
+    "Tienda online especializada en la venta de iPhones con catálogo dinámico, panel de administración y sistema de autenticación para usuarios y administradores.",
+longDescription: `
+Desarrollé una plataforma ecommerce fullstack orientada a la venta de smartphones y consolas, enfocada tanto en la experiencia de compra del usuario como en la gestión administrativa del negocio.
+
+La aplicación permite navegar un catálogo de productos, generar órdenes de compra y realizar pagos online mediante la integración con Mercado Pago. También incluye validación manual de pagos por transferencia y notificaciones automáticas por email.
+
+Además, cuenta con un panel de administración para gestionar productos, pedidos y validar pagos, así como un panel de usuario donde los clientes pueden visualizar su historial de compras y hacer seguimiento del estado de sus pedidos.
+
+El proyecto fue desarrollado utilizando Next.js, React, TypeScript y PostgreSQL, integrando autenticación con JWT, envío de emails con Nodemailer y desplegado en Vercel.
+`,
+  
+    stack: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL (Supabase)",
+    "Tailwind CSS",
+    "Mercado Pago API",
+    "JWT",
+    "Nodemailer",
+    "Vercel"
+  ],
+  highlights: [
+    "Sistema de autenticación con roles (admin y usuario)",
+    "Panel de administración para gestión de productos",
+    "Catálogo dinámico con páginas de detalle por producto",
+    "Optimización de consultas a base de datos PostgreSQL",
+    "Diseño responsive para mobile y desktop"
+  ],
+  liveUrl: "https://iphones-e-commerce.vercel.app",
+  githubUrl: null
+},
   {
     slug: "truckers-talent",
     title: "Truckers Talent",
-    status: "In development",
+    status: "Finished",
     role: "Product Manager · Tech Lead · Full Stack Developer",
     description:
       "Plataforma para conectar empresas de transporte con talento especializado. Lideré el desarrollo técnico y la evolución del producto.",
@@ -22,14 +61,14 @@ export const projects = [
       "Optimización de consultas SQL",
       "Arquitectura modular y escalable",
     ],
-    liveUrl: null,
+    liveUrl: "https://www.truckerstalent.com",
     githubUrl: null,
   },
   {
     slug: "zatek-akademy",
     title: "Zatek Akademy",
     role: "Full Stack Developer",
-    status: "In development",
+    status: "Finished",
     description:
       "Plataforma educativa con cursos interactivos, gamificación y certificaciones automáticas.",
     longDescription:

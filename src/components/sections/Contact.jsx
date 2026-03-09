@@ -64,7 +64,7 @@ export default function ContactSection() {
               <ProfileCardWide
               href="https://www.linkedin.com/in/santiago-taher-239008317"
               image="/cap-git.png"
-           
+                alt={"linkedin"}
                 username="Santiago Taher"
                 description="Conecta conmigo profesionalmente"
               />
@@ -72,7 +72,7 @@ export default function ContactSection() {
                 href="https://github.com/Santiagotomas74"
                 image="/cap-linked.png"
                 label="GitHub"
-             
+                alt={"git"}
                 username="Santiagotomas74"
                 description="Explora mis repositorios y código"
               />

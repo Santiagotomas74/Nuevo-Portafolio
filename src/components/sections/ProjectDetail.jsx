@@ -47,6 +47,7 @@ export default function ProjectDetail({ project }) {
               <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tighter italic">
                 {project.title}
               </h1>
+              
               <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-3xl">
                 {project.longDescription}
               </p>
@@ -71,15 +72,7 @@ export default function ProjectDetail({ project }) {
             {/* CTA: Links a Repositorio o Demo */}
             {(project.liveUrl || project.githubUrl) && (
               <div className="pt-8 flex flex-wrap gap-4">
-                {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    className="flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold hover:scale-105 transition-all shadow-lg shadow-primary/20"
-                  >
-                    Ver Proyecto en vivo <Rocket size={18} />
-                  </a>
-                )}
+              
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
@@ -102,6 +95,15 @@ export default function ProjectDetail({ project }) {
           >
             {/* Card de Rol */}
             <div className="p-8 rounded-[2.5rem] border border-white/5 bg-white/[0.02] backdrop-blur-3xl space-y-6">
+               {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    className="flex items-center gap-3  rounded-full bg-primary text-primary-foreground font-bold hover:scale-105 transition-all shadow-lg shadow-primary/20"
+                  >
+                    Ver Proyecto en vivo <Rocket size={18} />
+                  </a>
+                )}
               <div>
                 <h4 className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-3 font-bold">Mi Rol</h4>
                 <p className="text-lg font-bold text-foreground leading-snug">

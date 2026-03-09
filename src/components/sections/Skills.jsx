@@ -12,7 +12,7 @@ const skillCategories = [
       { name: "React", level: 90 },
       { name: "Next.js", level: 90 },
       { name: "JavaScript (ES6+)", level: 95 },
-      { name: "TypeScript", level: 70 },
+      { name: "TypeScript", level: 90 },
       { name: "HTML5 / CSS3", level: 90 },
     ],
   },
