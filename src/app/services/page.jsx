@@ -1,20 +1,22 @@
 import Navbar from "./NavBar";
+import HeroServices from "@/components/sections/HeroServices";
+import Solutions from "@/components/sections/Solutions";
 import Services from "@/components/sections/ServicesView";
-import Contact from "@/components/sections/Contact"; 
+import Contact from "@/components/sections/ContactServices";
+import Clients from "@/components/sections/Clients";
 
 export default function Home() {
   return (
-    
-   <div>
-      <Navbar/>
-        <Services/>
-        <Contact/>
-
+    <div>
+      <Navbar />
+      <HeroServices />
+      <Clients />
+      <Solutions />
+      <Services />
+      <Contact />
     </div>
-    
   );
 }
-
 
 /*
 
