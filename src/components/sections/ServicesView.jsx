@@ -1,149 +1,174 @@
-
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Button, Chip } from "@mui/material"; 
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import BusinessIcon from '@mui/icons-material/Business';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import TerminalIcon from '@mui/icons-material/Terminal';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import SecurityIcon from '@mui/icons-material/Security';
+import React from "react";
+import { motion } from "framer-motion";
+import { Button, Chip } from "@mui/material";
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
+import BusinessIcon from "@mui/icons-material/Business";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import TerminalIcon from "@mui/icons-material/Terminal";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import SecurityIcon from "@mui/icons-material/Security";
 
 // Configuración de Colores y Datos (Mantenemos tus datos originales)
 const SERVICES_DATA = [
   {
-    id: 'landing',
-    title: 'Landing Page',
-    subtitle: 'Conversión Directa',
-    price: '$80 – $150 mil ARS',
-    priceDetail: '',
+    id: "landing",
+    title: "Landing Page",
+    subtitle: "Conversión Directa",
+    price: "$80 – $150 mil ARS",
+    priceDetail: "",
     icon: <RocketLaunchIcon />,
-    description: 'Estructura optimizada para captar clientes rápidamente.',
-    features: ['1 página (one-page)',  'Diseño Grafico (Opcional)' , 'Diseño Responsive (mobile first)', 'Formulario de contacto o WhatsApp', 'Dominio y Hosting (Opcional)', 'Optimizacion Basica De Rendimiento', 'Soporte Post-Lanzamiento'],
-    recommended: true
-  },
-  {
-    id: 'corporate',
-    title: 'Institucional',
-    subtitle: 'Presencia de Marca',
-    price: '$150 – $300 mil ARS',
-    priceDetail: '',
-    icon: <BusinessIcon />,
-    description: 'Sitio robusto para empresas que buscan transmitir confianza.',
-    features: ['Hasta 7 secciones', 'Diseño Grafico (Opcional)', 'Diseño Responsive (mobile first)','Panel de administración básico', 'Formulario + Mapa + contacto+ integraciones', 'Optimización SEO básica', 'Dominio y Hosting (Opcional)'],
-    recommended: true
-  },
-  {
-    id: 'ecommerce',
-    title: 'E-commerce',
-    subtitle: 'Ventas 24/7',
-    price: '$350 – $700 mil ARS',
-    priceDetail: 'Según alcance y complejidad (Requiere mantenimiento mensual)',
-    icon: <ShoppingCartIcon />,
-    description: 'Tu tienda online con todo lo necesario para escalar.',
-    features: ['Productos ilimitados', 'Carrito de compras', 'Pasarela de pago (MercadoPago / Stripe)', 'Panel de administrador: Gestión de Stock y ventas', 'Almacenamiento de productos en una Base de datos', 'Diseño Grafico (Opcional)', 'Diseño Responsive (mobile first)', 'Dominio y Hosting (Opcional)'],
-    recommended: true
-  },
-   {
-    id: 'system',
-    title: 'Portal o Sistema Web',
-    subtitle: 'Funcionalidad Avanzada',
-    price: '$400 – $800 mil ARS',
-    priceDetail: 'Según alcance y complejidad (Requiere mantenimiento mensual)',
-    icon: <TerminalIcon sx={{ fontSize: 40 }} />,
-    description: 'Ideal para reservas, empleo, agendas o membresías.',
+    description: "Estructura optimizada para captar clientes rápidamente.",
     features: [
-      'Usuarios y roles',
-      'Panel personalizado',
-      'Seccion de administración',
-      'Funcionalidades avanzadas',
-      'Arquitectura escalable',
-      'Base de datos a medida', 'Diseño Grafico a medida', 'Diseño Responsive (mobile first)', 'Dominio y Hosting (Opcional)'
+      "1 página (one-page)",
+      "Diseño Grafico (Opcional)",
+      "Diseño Responsive (mobile first)",
+      "Formulario de contacto o WhatsApp",
+      "Dominio y Hosting (Opcional)",
+      "Optimizacion Basica De Rendimiento",
+      "Soporte Post-Lanzamiento",
     ],
-    recommended: true
+    recommended: true,
   },
   {
-  id: 'custom',
-  title: 'Sistema Web a Medida (Personalizado)',
-  subtitle: 'Soluciones Escalables',
-  price: '$550 mil – $1.000.000+ ARS',
-  priceDetail: 'Según alcance y complejidad (Requiere mantenimiento mensual)',
-  icon: <TerminalIcon />,
-  description: 'Desarrollo de plataformas web con lógica de negocio personalizada.',
-  features: [
-      'Diseño Grafico a medida', 'Diseño Responsive (mobile first)', 'Dominio y Hosting (Opcional)',
-      'Arquitectura personalizada',
-      'Backend + Frontend + Base de datos',
-      'Integración con APIs',
-      'Testing y escalabilidad',
-      'Documentación técnica'
+    id: "corporate",
+    title: "Institucional",
+    subtitle: "Presencia de Marca",
+    price: "$150 – $300 mil ARS",
+    priceDetail: "",
+    icon: <BusinessIcon />,
+    description: "Sitio robusto para empresas que buscan transmitir confianza.",
+    features: [
+      "Hasta 7 secciones",
+      "Diseño Grafico (Opcional)",
+      "Diseño Responsive (mobile first)",
+      "Panel de administración básico",
+      "Formulario + Mapa + contacto+ integraciones",
+      "Optimización SEO básica",
+      "Dominio y Hosting (Opcional)",
     ],
-  recommended: false
-}
-
+    recommended: true,
+  },
+  {
+    id: "ecommerce",
+    title: "E-commerce",
+    subtitle: "Ventas 24/7",
+    price: "$350 – $700 mil ARS",
+    priceDetail: "Según alcance y complejidad (Requiere mantenimiento mensual)",
+    icon: <ShoppingCartIcon />,
+    description: "Tu tienda online con todo lo necesario para escalar.",
+    features: [
+      "Productos ilimitados",
+      "Carrito de compras",
+      "Pasarela de pago (MercadoPago / Stripe)",
+      "Panel de administrador: Gestión de Stock y ventas",
+      "Almacenamiento de productos en una Base de datos",
+      "Diseño Grafico (Opcional)",
+      "Diseño Responsive (mobile first)",
+      "Dominio y Hosting (Opcional)",
+    ],
+    recommended: true,
+  },
+  {
+    id: "system",
+    title: "Portal o Sistema Web",
+    subtitle: "Funcionalidad Avanzada",
+    price: "$400 – $800 mil ARS",
+    priceDetail: "Según alcance y complejidad (Requiere mantenimiento mensual)",
+    icon: <TerminalIcon sx={{ fontSize: 40 }} />,
+    description: "Ideal para reservas, empleo, agendas o membresías.",
+    features: [
+      "Usuarios y roles",
+      "Panel personalizado",
+      "Seccion de administración",
+      "Funcionalidades avanzadas",
+      "Arquitectura escalable",
+      "Base de datos a medida",
+      "Diseño Grafico a medida",
+      "Diseño Responsive (mobile first)",
+      "Dominio y Hosting (Opcional)",
+    ],
+    recommended: true,
+  },
+  {
+    id: "custom",
+    title: "Sistema Web a Medida (Personalizado)",
+    subtitle: "Soluciones Escalables",
+    price: "$550 mil – $1.000.000+ ARS",
+    priceDetail: "Según alcance y complejidad (Requiere mantenimiento mensual)",
+    icon: <TerminalIcon />,
+    description:
+      "Desarrollo de plataformas web con lógica de negocio personalizada.",
+    features: [
+      "Diseño Grafico a medida",
+      "Diseño Responsive (mobile first)",
+      "Dominio y Hosting (Opcional)",
+      "Arquitectura personalizada",
+      "Backend + Frontend + Base de datos",
+      "Integración con APIs",
+      "Testing y escalabilidad",
+      "Documentación técnica",
+    ],
+    recommended: false,
+  },
 ];
 
 const EXTRA_SERVICES = [
-   { 
-    title: 'Soporte VIP (Frontend & Backend)',
-    price: 'Desde $40.000',
-    desc: 'Asistencia técnica prioritaria y soporte continuo.'
-  },
-  
   {
-  title: 'Gestión de Base de Datos',
-  price: 'Desde $50.000',
-  desc: 'Mantenimiento, optimización y administración de bases de datos.'
-}
-,
-  { 
-    title: 'Diseño Gráfico',
-    price: 'Desde $40.000',
-    desc: 'Mejora de la comunicación visual y branding digital.'
-  },
-  { 
-    title: 'Deploy & Hosting',
-    price: 'Incluido / A convenir',
-    desc: 'Configuración de dominio, hosting, SSL y puesta en producción.'
-  },
-  { 
-    title: 'Integraciones & Automatizaciones',
-    price: 'Desde $30.000',
-    desc: 'Integración con pagos, CRMs, APIs y herramientas externas.'
-  },
-  { 
-    title: 'Optimización de Performance',
-    price: 'Desde $30.000',
-    desc: 'Mejora de velocidad, Core Web Vitals y experiencia de usuario.'
-  },
-  { 
-    title: 'Rediseño Web',
-    price: 'Desde $45.000',
-    desc: 'Actualización visual y mejora de usabilidad.'
-  },
-  { 
-    title: 'SEO Profesional',
-    price: 'Desde $35.000',
-    desc: 'Optimización para buscadores y posicionamiento en Google.'
+    title: "Soporte VIP (Frontend & Backend)",
+    price: "Desde $40.000",
+    desc: "Asistencia técnica prioritaria y soporte continuo.",
   },
 
- 
+  {
+    title: "Gestión de Base de Datos",
+    price: "Desde $50.000",
+    desc: "Mantenimiento, optimización y administración de bases de datos.",
+  },
+  {
+    title: "Diseño Gráfico",
+    price: "Desde $40.000",
+    desc: "Mejora de la comunicación visual y branding digital.",
+  },
+  {
+    title: "Deploy & Hosting",
+    price: "Incluido / A convenir",
+    desc: "Configuración de dominio, hosting, SSL y puesta en producción.",
+  },
+  {
+    title: "Integraciones & Automatizaciones",
+    price: "Desde $30.000",
+    desc: "Integración con pagos, CRMs, APIs y herramientas externas.",
+  },
+  {
+    title: "Optimización de Performance",
+    price: "Desde $30.000",
+    desc: "Mejora de velocidad, Core Web Vitals y experiencia de usuario.",
+  },
+  {
+    title: "Rediseño Web",
+    price: "Desde $45.000",
+    desc: "Actualización visual y mejora de usabilidad.",
+  },
+  {
+    title: "SEO Profesional",
+    price: "Desde $35.000",
+    desc: "Optimización para buscadores y posicionamiento en Google.",
+  },
 ];
 
-
 function ServicesView() {
-    const whatsappNumber = "541126042925"; 
+  const whatsappNumber = "541126042925";
 
-    const handleConsult = (planName) => {
-        const message = `Hola Santiago, me interesa recibir más información sobre el ${planName}.`;
-        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-        window.open(url, '_blank');
-    };
+  const handleConsult = (planName) => {
+    const message = `Hola Santiago, me interesa recibir más información sobre el ${planName}.`;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
 
-    return (
-        <div className="services-wrapper">
-            <style>{`
+  return (
+    <div className="services-wrapper">
+      <style>{`
                 :root {
                     --primary: #00dbfc;
                     --primary-glow: rgba(0, 219, 252, 0.3);
@@ -563,152 +588,159 @@ function ServicesView() {
 }
             `}</style>
 
-            <div className="container">
-                <header className="header">
-                    <motion.h1 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                    >
-                        Planes a medida
-                    </motion.h1>
-                    <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem' }}>
-                        Soluciones digitales de alto rendimiento para negocios escalables.
-                    </p>
-                </header>
+      <div className="container">
+        <header className="header">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            Planes a medida
+          </motion.h1>
+          <p style={{ color: "var(--text-muted)", fontSize: "1.2rem" }}>
+            Soluciones digitales de alto rendimiento para negocios escalables.
+          </p>
+        </header>
 
-                <div className="plans-grid">
-                    {SERVICES_DATA.map((plan, i) => (
-                        <motion.div 
-                            key={plan.id}
-                            className={`card ${plan.recommended ? 'recommended' : ''}`}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.1 }}
-                        >
-                            {plan.recommended && (
-                                <Chip 
-                                    label="RECOMENDADO" 
-                                    sx={{ 
-                                        position: 'absolute', top: 20, right: 20, 
-                                        bgcolor: 'var(--primary)', color: '#000', fontWeight: 800, fontSize: '0.7rem' 
-                                    }} 
-                                />
-                            )}
-                            <div className="icon-box">
-                                {React.cloneElement(plan.icon, { sx: { fontSize: 32 } })}
-                            </div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>{plan.title}</h3>
-                            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>{plan.description}</p>
-                            
-                            <div className="price-tag">
-                                <span className="price-val">{plan.price}</span>
-                                <span className="price-detail">{plan.priceDetail}</span>
-                            </div>
+        <div className="plans-grid">
+          {SERVICES_DATA.map((plan, i) => (
+            <motion.div
+              key={plan.id}
+              className={`card ${plan.recommended ? "recommended" : ""}`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+            >
+              {plan.recommended && (
+                <Chip
+                  label="RECOMENDADO"
+                  sx={{
+                    position: "absolute",
+                    top: 20,
+                    right: 20,
+                    bgcolor: "var(--primary)",
+                    color: "#000",
+                    fontWeight: 800,
+                    fontSize: "0.7rem",
+                  }}
+                />
+              )}
+              <div className="icon-box">
+                {React.cloneElement(plan.icon, { sx: { fontSize: 32 } })}
+              </div>
+              <h3 style={{ fontSize: "1.5rem", marginBottom: "8px" }}>
+                {plan.title}
+              </h3>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>
+                {plan.description}
+              </p>
 
-                            <div className="feat-list">
-                                {plan.features.map((feat, idx) => (
-                                    <div key={idx} className="feat-item">
-                                        <CheckCircleOutlineIcon className="feat-icon" />
-                                        {feat}
-                                    </div>
-                                ))}
-                            </div>
+              <div className="price-tag">
+                <span className="price-val">{plan.price}</span>
+                <span className="price-detail">{plan.priceDetail}</span>
+              </div>
 
-                            <Button 
-                                variant="contained" 
-                                className="btn-primary" 
-                                fullWidth
-                                onClick={() => handleConsult(plan.title)}
-                            >
-                                Iniciar Proyecto
-                            </Button>
-                        </motion.div>
-                    ))}
-                </div>
+              <div className="feat-list">
+                {plan.features.map((feat, idx) => (
+                  <div key={idx} className="feat-item">
+                    <CheckCircleOutlineIcon className="feat-icon" />
+                    {feat}
+                  </div>
+                ))}
+              </div>
 
-             <motion.section
-  className="maintenance-pro"
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6 }}
->
-  <div className="maintenance-card">
-    <div className="maintenance-header">
-      <div className="maintenance-icon">
-        <SecurityIcon fontSize="inherit" />
-      </div>
-
-      <div>
-        <h3>Mantenimiento Mensual & Soporte</h3>
-        <p className="maintenance-subtitle">
-          Tu sitio siempre seguro, actualizado y funcionando sin interrupciones.
-        </p>
-      </div>
-    </div>
-
-    <div className="maintenance-body">
-      <div className="maintenance-price">
-        Desde <span>$40 – $80 mil ARS</span> / mes
-      </div>
-
-      <ul className="maintenance-features">
-        <li>🔒 Copias de seguridad semanales</li>
-        <li>⚙️ Actualizaciones y parches de seguridad</li>
-        <li>🛡️ Protección contra hackeos</li>
-        <li>✏️ Cambios menores de contenido</li>
-        <li>📈 Monitoreo de rendimiento</li>
-      </ul>
-
-      <motion.a
-        href="#contact"
-        className="maintenance-cta"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        Solicitar mantenimiento
-      </motion.a>
-    </div>
-  </div>
-</motion.section>
-
-                  <motion.section
-  className="extras-section"
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
->
-  <div className="extras-header">
-    <h3>➕ Servicios Adicionales</h3>
-    <p>
-      Potenciá tu proyecto con servicios opcionales adaptados a tus necesidades.
-    </p>
-  </div>
-
-  <div className="extras-grid">
-    {EXTRA_SERVICES.map((service, idx) => (
-      <motion.div
-        key={idx}
-        className="extra-card"
-        whileHover={{ y: -6 }}
-        transition={{ duration: 0.3 }}
-      >
-        <h4>{service.title}</h4>
-
-        <div className="extra-price">
-          {service.price}
+              <Button
+                variant="contained"
+                className="btn-primary"
+                fullWidth
+                onClick={() => handleConsult(plan.title)}
+              >
+                Iniciar Proyecto
+              </Button>
+            </motion.div>
+          ))}
         </div>
 
-        <span className="extra-alt-price">
-          {service.altPrice}
-        </span>
-      </motion.div>
-    ))}
-  </div>
-</motion.section>
+        <motion.section
+          className="maintenance-pro"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="maintenance-card">
+            <div className="maintenance-header">
+              <div className="maintenance-icon">
+                <SecurityIcon fontSize="inherit" />
+              </div>
+
+              <div>
+                <h3>Mantenimiento Mensual & Soporte</h3>
+                <p className="maintenance-subtitle">
+                  Tu sitio siempre seguro, actualizado y funcionando sin
+                  interrupciones.
+                </p>
+              </div>
             </div>
-        </div>
-    );
+
+            <div className="maintenance-body">
+              <div className="maintenance-price">
+                Desde <span>$40 – $80 mil ARS</span> / mes
+              </div>
+
+              <ul className="maintenance-features">
+                <li>🔒 Copias de seguridad semanales</li>
+                <li>⚙️ Actualizaciones y parches de seguridad</li>
+                <li>🛡️ Protección contra hackeos</li>
+                <li>✏️ Cambios menores de contenido</li>
+                <li>📈 Monitoreo de rendimiento</li>
+              </ul>
+
+              <motion.a
+                href="#contact"
+                className="maintenance-cta"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Solicitar mantenimiento
+              </motion.a>
+            </div>
+          </div>
+        </motion.section>
+
+        <motion.section
+          className="extras-section"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="extras-header">
+            <h3>➕ Servicios Adicionales</h3>
+            <p>
+              Potenciá tu proyecto con servicios opcionales adaptados a tus
+              necesidades.
+            </p>
+          </div>
+
+          <div className="extras-grid">
+            {EXTRA_SERVICES.map((service, idx) => (
+              <motion.div
+                key={idx}
+                className="extra-card"
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3 }}
+              >
+                <h4>{service.title}</h4>
+
+                <div className="extra-price">{service.price}</div>
+
+                <span className="extra-alt-price">{service.altPrice}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      </div>
+    </div>
+  );
 }
 
 export default ServicesView;

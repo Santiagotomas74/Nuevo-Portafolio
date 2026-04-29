@@ -2,15 +2,19 @@
 import LightPillar from "../../app/fondo/LightPillar";
 import { motion } from "framer-motion";
 // Opcional: puedes importar iconos si usas Lucide
-import { Download, Globe } from "lucide-react"; 
-import { sendGAEvent } from '@next/third-parties/google';
+import { Download, Globe } from "lucide-react";
+import { sendGAEvent } from "@next/third-parties/google";
 
 export default function Hero() {
   return (
-    <div style={{ width: '100%', height: '950px', position: 'relative', overflow: 'hidden' }}>
-      
-
-
+    <div
+      style={{
+        width: "100%",
+        height: "950px",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
       <section className="relative z-10 h-full flex items-center">
         <div className="max-w-6xl mx-auto px-6">
           <motion.h1
@@ -25,9 +29,9 @@ export default function Hero() {
           </motion.h1>
 
           <p className="mt-6 max-w-2xl text-muted text-lg">
-            Desarrollo aplicaciones web modernas, escalables y seguras con Next.js,
-            React y Node.js, enfocadas en performance, arquitectura limpia y
-            experiencia de usuario.
+            Desarrollo aplicaciones web modernas, escalables y seguras con
+            Next.js, React y Node.js, enfocadas en performance, arquitectura
+            limpia y experiencia de usuario.
           </p>
 
           {/* Contenedor de Botones */}
@@ -43,8 +47,10 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              onClick={() => sendGAEvent({ event: 'button_click', value: 'download_cv_es' })}
-              href="/cv-es.pdf"
+              onClick={() =>
+                sendGAEvent({ event: "button_click", value: "download_cv_es" })
+              }
+              href="/cv-es2.pdf"
               download="CV_Santiago_Taher_ES.pdf"
               className="px-6 py-3 rounded-lg bg-black/40 backdrop-blur-md border border-white/10 flex items-center gap-2 hover:bg-black/60 transition-all"
             >
@@ -56,8 +62,10 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href="/cv-en.pdf"
-              onClick={() => sendGAEvent({ event: 'button_click', value: 'download_cv_en' })}
+              href="/cv-en2.pdf"
+              onClick={() =>
+                sendGAEvent({ event: "button_click", value: "download_cv_en" })
+              }
               download="CV_Santiago_Taher_EN.pdf"
               className="px-6 py-3 rounded-lg bg-black/40 backdrop-blur-md border border-white/10 flex items-center gap-2 hover:bg-black/60 transition-all"
             >

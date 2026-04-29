@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function HeroSection() {
-  // 👉 CAMBIÁ ESTA URL POR TU IMAGEN PRINCIPAL
-  const heroImage = "/image5.png"; // Puedes usar una imagen local en tu carpeta 'public' o una URL externa
+  const heroImage = "/image5.png";
+  const logoImage = "/image2.png";
 
-  // 👉 CAMBIÁ ESTA URL POR TU LOGO
-  const logoImage = "/image2.png"; // Puedes usar una imagen local en tu carpeta 'public' o una URL externa
+  // 👉 CAMBIAR POR TU NÚMERO
+  const whatsappUrl = "https://wa.me/5491126042925";
 
   return (
     <section className="relative min-h-screen bg-black text-white overflow-hidden flex items-center px-6">
@@ -43,13 +43,23 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            <button className="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-2xl font-semibold transition">
+            {/* 👉 VA A CLIENTES */}
+            <a
+              href="#clients"
+              className="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-2xl font-semibold transition text-center"
+            >
               Ver proyectos
-            </button>
+            </a>
 
-            <button className="border border-zinc-700 hover:bg-zinc-900 px-8 py-4 rounded-2xl font-semibold transition">
+            {/* 👉 VA A WHATSAPP */}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-zinc-700 hover:bg-zinc-900 px-8 py-4 rounded-2xl font-semibold transition text-center"
+            >
               Pedir presupuesto
-            </button>
+            </a>
           </div>
         </motion.div>
 
@@ -60,7 +70,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          {/* LOGO CON IMAGEN */}
+          {/* LOGO */}
           <div className="absolute -top-20 -right-4 bg-zinc-950 border border-zinc-800 px-4 py-3 rounded-2xl shadow-xl z-10">
             <div className="relative w-[180px] h-[180px]">
               <Image
@@ -75,9 +85,6 @@ export default function HeroSection() {
 
           {/* CONTENEDOR */}
           <div className="relative bg-zinc-950 border border-zinc-800 rounded-3xl p-5 shadow-2xl overflow-hidden">
-            {/* NAV */}
-
-            {/* IMAGEN */}
             <div className="relative h-[420px] rounded-2xl overflow-hidden">
               <Image
                 src={heroImage}
@@ -96,11 +103,18 @@ export default function HeroSection() {
                   Diseño moderno + estrategia + resultados reales.
                 </p>
 
-                <button className="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl font-semibold transition">
+                {/* 👉 VA A WHATSAPP */}
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl font-semibold transition"
+                >
                   Solicitar Diseño
-                </button>
+                </a>
               </div>
             </div>
+
             <div className="flex items-center gap-2 mt-4 relative z-10">
               <div className="w-3 h-3 bg-red-500 rounded-full" />
               <div className="w-3 h-3 bg-yellow-500 rounded-full" />

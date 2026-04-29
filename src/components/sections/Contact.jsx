@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MessageCircle, Copy, Check, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactSection() {
   const handleConsult = (message) => {
@@ -51,7 +52,7 @@ export default function ContactSection() {
 
               <ContactAction
                 onClick={() => handleConsult("los servicios web que ofrecés")}
-                icon={<MessageCircle size={22} />}
+                icon={<FaWhatsapp size={22} />}
                 label="WhatsApp"
                 value="+54 11 2604 2925"
               />
@@ -107,7 +108,7 @@ function ContactAction({ href, onClick, icon, label, value, copyable }) {
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3 text-primary">
-          <div className="p-3 rounded-2xl bg-primary/10 group-hover:bg-primary group-hover:text-black transition">
+          <div className="p-3 rounded-2xl bg-primary/10 group-hover:bg-primary transition">
             {icon}
           </div>
           <span className="text-sm font-bold uppercase tracking-widest opacity-70">

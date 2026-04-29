@@ -38,7 +38,7 @@ const clients = [
 
 export default function ClientsSection() {
   return (
-    <section className="bg-zinc-950 text-white py-24 px-6">
+    <section id="clients" className="bg-zinc-950 text-white py-24 px-6">
       <div className="max-w-6xl mx-auto">
         {/* HEADER */}
         <div className="text-center mb-14">
@@ -104,9 +104,14 @@ export default function ClientsSection() {
 
                 {/* EMPUJA BOTÓN ABAJO */}
                 <div className="mt-auto pt-4">
-                  <button className="w-full bg-zinc-900 hover:bg-blue-600 text-white py-4 rounded-xl font-semibold transition text-center">
+                  <a
+                    href={client.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-zinc-900 hover:bg-blue-600 text-white py-4 rounded-xl font-semibold transition text-center"
+                  >
                     Ver proyecto
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -119,9 +124,14 @@ export default function ClientsSection() {
             ¿Querés que tu negocio sea el próximo caso de éxito?
           </p>
 
-          <button className="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-2xl font-semibold transition">
+          <a
+            href="https://wa.me/5491126042925"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-2xl font-semibold transition"
+          >
             Solicitar presupuesto
-          </button>
+          </a>
         </div>
       </div>
     </section>
