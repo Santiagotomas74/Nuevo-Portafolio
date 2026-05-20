@@ -26,7 +26,7 @@ const projects = [
     image: "/image1.png", // 👈 reemplazar
     short: "Sistema moderno para venta y alquiler.",
     desc: "Perfecta para inmobiliarias que necesitan captar consultas.",
-    url: "https://web-inmobiliaria.vercel.app/",
+    url: "https://www.marisapuentespropiedades.com.ar",
     features: [
       "Listado de propiedades",
       "Filtros por zona",
