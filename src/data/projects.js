@@ -2,6 +2,7 @@ export const projects = [
   {
     slug: "dov-repuestos-ecommerce",
     title: "DOV Repuestos",
+    image: "/Dov.png",
     status: "maintenance only",
     role: "Full Stack Developer",
     description:
@@ -56,6 +57,7 @@ El proyecto fue desarrollado con Next.js, React, TypeScript y PostgreSQL, utiliz
   {
     slug: "marisa-puentes-propiedades",
     title: "Marisa Puentes Propiedades",
+    image: "/image10.png",
     status: "maintenance only",
     role: "Full Stack Developer",
     description:
@@ -98,10 +100,11 @@ El proyecto fue desarrollado utilizando Next.js, React, TypeScript y PostgreSQL,
     liveUrl: "https://www.marisapuentespropiedades.com.ar",
     githubUrl: null,
   },
-  ,
+
   {
     slug: "iphone-ecommerce",
     title: "iPhones E-commerce",
+    image: "/image5.png",
     status: "Finished",
     role: "Full Stack Developer",
     description:
@@ -141,6 +144,7 @@ El proyecto fue desarrollado utilizando Next.js, React, TypeScript y PostgreSQL,
   {
     slug: "truckers-talent",
     title: "Truckers Talent",
+    image: "/TTS.png",
     status: "Finished",
     role: "Product Manager · Tech Lead · Full Stack Developer",
     description:
@@ -157,7 +161,50 @@ El proyecto fue desarrollado utilizando Next.js, React, TypeScript y PostgreSQL,
     liveUrl: "https://www.truckerstalent.com",
     githubUrl: null,
   },
+
   {
+    slug: "perfumeria-online",
+    image: "/arabe.png",
+    title: "Perfumería Online",
+    status: "Finished",
+    role: "Full Stack Developer",
+    description:
+      "E-commerce moderno con carrito, autenticación y panel administrativo.",
+    longDescription:
+      "E-commerce desarrollado con Next.js y backend propio en Node.js, con manejo de estado global y base de datos relacional optimizada.",
+    stack: ["Next.js", "Tailwind CSS", "Redux Toolkit", "Node.js", "MySQL"],
+    highlights: [
+      "Manejo de estado global con Redux Toolkit",
+      "API REST modular",
+      "Modelo relacional normalizado",
+    ],
+    liveUrl: "https://perfumes-arabes.vercel.app",
+    githubUrl: null,
+  },
+
+  {
+    slug: "pasteleria-selenita",
+    title: "Pastelería Selenita",
+    image: "/pasteleria.png",
+    role: "Full Stack Developer",
+    status: "maintenance only",
+    description:
+      "E-commerce con pagos online, panel admin y sistema de pedidos.",
+    longDescription:
+      "Aplicación web completa para una pastelería, con carrito de compras, panel administrativo y pagos integrados.",
+    stack: ["React", "Node.js", "Express", "MySQL", "MercadoPago"],
+    highlights: [
+      "Integración con MercadoPago",
+      "Panel administrativo completo",
+      "Arquitectura modular y patrón MVP",
+    ],
+    liveUrl: "https://pasteleria-sele.vercel.app",
+    githubUrl: null,
+  },
+];
+
+/**
+ * {
     slug: "zatek-akademy",
     title: "Zatek Akademy",
     role: "Full Stack Developer",
@@ -183,25 +230,7 @@ El proyecto fue desarrollado utilizando Next.js, React, TypeScript y PostgreSQL,
     liveUrl: null,
     githubUrl: null,
   },
-  {
-    slug: "perfumeria-online",
-    title: "Perfumería Online",
-    status: "Finished",
-    role: "Full Stack Developer",
-    description:
-      "E-commerce moderno con carrito, autenticación y panel administrativo.",
-    longDescription:
-      "E-commerce desarrollado con Next.js y backend propio en Node.js, con manejo de estado global y base de datos relacional optimizada.",
-    stack: ["Next.js", "Tailwind CSS", "Redux Toolkit", "Node.js", "MySQL"],
-    highlights: [
-      "Manejo de estado global con Redux Toolkit",
-      "API REST modular",
-      "Modelo relacional normalizado",
-    ],
-    liveUrl: "https://perfumes-arabes.vercel.app",
-    githubUrl: null,
-  },
-  {
+ *{
     slug: "secure-messaging-platform",
     title: "Plataforma de Mensajería Segura",
     role: "Full Stack Developer",
@@ -230,22 +259,4 @@ El proyecto fue desarrollado utilizando Next.js, React, TypeScript y PostgreSQL,
     liveUrl: null,
     githubUrl: null,
   },
-  {
-    slug: "pasteleria-selenita",
-    title: "Pastelería Selenita",
-    role: "Full Stack Developer",
-    status: "maintenance only",
-    description:
-      "E-commerce con pagos online, panel admin y sistema de pedidos.",
-    longDescription:
-      "Aplicación web completa para una pastelería, con carrito de compras, panel administrativo y pagos integrados.",
-    stack: ["React", "Node.js", "Express", "MySQL", "MercadoPago"],
-    highlights: [
-      "Integración con MercadoPago",
-      "Panel administrativo completo",
-      "Arquitectura modular y patrón MVP",
-    ],
-    liveUrl: "https://pasteleria-sele.vercel.app",
-    githubUrl: null,
-  },
-];
+ */
