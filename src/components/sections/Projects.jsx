@@ -91,7 +91,7 @@ export default function Projects() {
                     <div className="flex items-center gap-2 px-3 py-1 rounded-md bg-white/5 text-[11px] text-gray-400 font-mono w-1/2 justify-center truncate border border-white/5">
                       <Globe size={10} className="shrink-0 text-gray-500" />
                       <span className="truncate">
-                        {project.demoUrl || `taher.dev/${project.slug}`}
+                        {project.liveUrl || `taher.dev/${project.slug}`}
                       </span>
                     </div>
                     <div className="w-10" />
