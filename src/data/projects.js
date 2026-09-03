@@ -1,5 +1,48 @@
 export const projects = [
   {
+    slug: "plataforma-institucional-educativa",
+    title: "Instituto de Inglés I.N.K",
+    image: "/ink.png", // Asegurate de agregar una imagen en tu carpeta public
+    status: "In Progress",
+    role: "Full Stack Developer",
+    description:
+      "Solución digital integral para instituciones educativas que combina una Landing Page institucional con un Campus Virtual y sistema de gestión académica centralizado.",
+
+    longDescription: `
+Actualmente estoy desarrollando una plataforma web orientada a instituciones educativas, diseñada para fortalecer su presencia digital y centralizar la gestión académica en un único entorno. El proyecto nace para resolver la fuerte dependencia de procesos presenciales, la información distribuida y el acceso limitado a materiales fuera del horario de clases.
+
+La solución integra una Landing Page institucional —que presenta la identidad, oferta académica y canales de contacto— con un Campus Virtual completo. Este sistema permite gestionar altas de estudiantes y docentes, organizar aulas, asignar horarios y estructurar materiales educativos mediante categorías.
+
+Además, cuenta con un panel de estados de cuenta, publicación de actividades y un robusto sistema de acceso basado en roles, garantizando que cada estudiante y docente visualice un campus personalizado.
+
+El proyecto está construido sobre una arquitectura escalable diseñada para incorporar progresivamente módulos de calificaciones, asistencia, notificaciones y calendarios, transformando una necesidad real en una solución tecnológica integral.
+`,
+
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "REST API",
+      "i18next",
+      "Lucide Icons",
+    ],
+
+    highlights: [
+      "Integración de Landing Page institucional y Campus Virtual",
+      "Gestión centralizada de estudiantes, docentes y aulas",
+      "Control de accesos personalizados basados en roles",
+      "Organización y distribución de materiales educativos y tareas",
+      "Seguimiento de estados de cuenta de usuarios",
+      "Arquitectura relacional y escalable para futuras integraciones",
+    ],
+
+    liveUrl: "https://www.institutodeinglesink.com.ar",
+    githubUrl: null,
+  },
+  {
     slug: "dov-repuestos-ecommerce",
     title: "DOV Repuestos",
     image: "/Dov.png",
